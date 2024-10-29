@@ -21,7 +21,7 @@ System.out.print("Enter name for subject " + (i + 1) + ": ");
             subjectNames[i] = scanner.nextLine();
         }
 
-        // Initialize the array for students
+      
         Student[] students = new Student[numStudents];
         for (int i = 0; i < numStudents; i++) {
 System.out.print("Enter Student " + (i + 1) + " name: ");
@@ -45,7 +45,7 @@ System.out.println("Invalid score. Please enter a score between 0 and 100.");
         
         Arrays.sort(students, (a, b) -> Double.compare(b.average, a.average));
 
-        // Display the summary
+        
         displaySummary(students, subjectNames);
         scanner.close();
     }
@@ -73,10 +73,16 @@ System.out.println("Invalid score. Please enter a score between 0 and 100.");
        System.out.println(" Total    Average    Position ");        
        System.out.println("********************************************************");
 	
-	
+	 //for (int i = 0; i < students.length; i++) {
+            System.out.printf("%-15s", students[i].name);
+            //for (double score : students[i].scores) {
+                System.out.printf("%-10.0f", score);
+            }
+            System.out.printf("%-10.0f %-10.2f %-10d%n", students[i].total, students[i].average, i + 1);
+        }
 
-
-
-
+        System.out.println("====================================================");
+    }
 }
-}
+
+

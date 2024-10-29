@@ -5,27 +5,24 @@ public static void main(String[] args) {
 
 System.out.print(" please enter your name :");
 String name = input.nextLine();
-System.out.println(" hi +name+ your welcome to my app :");
-String name = input.nextLine();
 
+System.out.println("************************************************:");
+System.out.println(" hi " + name + " your welcome to my app Enter ");
+System.out.println(" Please check your MBTI by clicking (A OR B)  :");
+System.out.println("*************************************************");
 displayQuestionsAndAnswers();
 		
 
 
 }
 
-//I create Scanner object for user input 
-private static Scanner input = new Scanner(System.in);
 
-//I declared a variable name of type String to store users name 
+private static Scanner input = new Scanner(System.in);
 
 private static String name;
 
-//then i declared a public method that can be accessed from any part of the code
-
 public static void displayQuestionsAndAnswers() {
-
-//declared 2d array to store questions and corresponding answers 		
+		
 
 String[][] questions = {
 
@@ -62,19 +59,17 @@ String[][] questions = {
         int[] thinkingFeeling = new int[2];
         int[] judgingPerceptive = new int[2];;
 
-//I created a for loop to ilterate through d question length and increment
+
 
 for (int i = 0; i < questions.length; i++) {
 
-//then i created a method to display the quetions in an array form targeting their indexes
 System.out.print(questions[i][0] + questions[i][1]);
 
 System.out.print("Enter your choice (A or B): ");
 
-//Convert input to upperCase
+
 
 	String answer = input.next().toUpperCase();
-//i created a while loop so that when inputed answer is not equal A or B it should throw invalid then ask uswer to input correct option
 
 while(!answer.equals("A") && !answer.equals("B")) {
 	System.out.print("invalid input please enter  A or B: ");
