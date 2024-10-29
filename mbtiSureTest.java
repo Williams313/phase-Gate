@@ -1,4 +1,5 @@
 
+
 import java.util.Scanner;
 
 public class mbtiSureTest {
@@ -77,7 +78,7 @@ public class mbtiSureTest {
             }
         }
 
-        // Determine MBTI type based on scores
+        // HERE I Determined MBTI type based on scores
         String mbtiType = "";
         mbtiType += extrovertIntrovert[0] > extrovertIntrovert[1] ? "E" : "I";
         mbtiType += sensingIntuitive[0] > sensingIntuitive[1] ? "S" : "N";
